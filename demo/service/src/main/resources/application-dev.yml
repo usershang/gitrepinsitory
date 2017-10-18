@@ -1,0 +1,51 @@
+# Server settings
+server:
+    port: 8088
+    #address: localhost
+    tomcat:
+        basedir: /newtv/boss/demo/service
+        access-log-enabled: true
+        access-log-pattern: "%h %l %u %t \"%r\" %s %b %D" 
+        max-threads: 2000
+        uri-encoding: UTF-8 
+management:
+    port: 8089
+    security:
+        enabled: false
+
+eureka:
+  client:
+      serviceUrl:
+        defaultZone: http://localhost:8761/eureka/
+
+# SPRING PROFILES
+spring:       
+    # HTTP ENCODING
+    #mvc.favicon.enabled: false
+    #resources.add-mappings: true
+    application:
+        name: demoservice
+    jackson:
+        serialization:
+            indent_output: true     
+    http:
+        encoding.charset: UTF-8
+        encoding.enable: true
+        encoding.force: true
+    datasource:
+        druid:
+            #dataSourceClassName: com.mysql.jdbc.jdbc2.optional.MysqlDataSource
+            driver-class-name: com.mysql.jdbc.Driver
+            url: jdbc:mysql://localhost:3306/newtvboss?useUnicode=true&amp;characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+            username: root
+            password: root
+            initial-size: 3
+            max-active: 20
+            druid.min-idle: 5
+endpoints:
+    health:
+        enabled: true
+        sensitive: false
+
+logging:
+    config: classpath:logback.xml

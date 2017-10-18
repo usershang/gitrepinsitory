@@ -1,0 +1,25 @@
+# SPRING PROFILES
+spring:       
+    # HTTP ENCODING
+    #mvc.favicon.enabled: false
+    #resources.add-mappings: true
+    application:
+        name: demoservice
+    jackson:
+        serialization:
+            indent_output: true     
+    http:
+        encoding.charset: UTF-8
+        encoding.enable: true
+        encoding.force: true
+# DATASOURCE
+    datasource:
+        druid:
+            #dataSourceClassName: com.mysql.jdbc.jdbc2.optional.MysqlDataSource
+            driver-class-name: com.mysql.jdbc.Driver
+            url: jdbc:mysql://localhost:3306/newtvboss?useUnicode=true&amp;characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+            username: root
+            password: root
+            initial-size: 3
+            max-active: 20
+            druid.min-idle: 5

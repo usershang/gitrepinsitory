@@ -1,0 +1,40 @@
+== demo相关接口
+
+=== demo接口1
+根据ID取得消息
+ 
+curl request:
+ 
+include::{snippets}/demo/curl-request.adoc[]
+
+.请求参数:
+include::{snippets}/demo/request-parameters.adoc[]
+
+请求实例:
+include::{snippets}/demo/http-request.adoc[]
+
+.返回字段说明:
+include::{snippets}/demo/response-fields.adoc[]
+ 
+响应实例:
+include::{snippets}/demo/http-response.adoc[]
+
+
+=== demo接口2
+根据ID取得消息
+
+curl request:
+
+include::{snippets}/hello/curl-request.adoc[]
+
+.请求参数:
+include::{snippets}/hello/request-parameters.adoc[]
+
+请求实例:
+include::{snippets}/hello/http-request.adoc[]
+
+.返回字段说明:
+include::{snippets}/hello/response-fields.adoc[]
+
+响应实例:
+include::{snippets}/hello/http-response.adoc[]

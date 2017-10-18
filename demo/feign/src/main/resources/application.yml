@@ -1,0 +1,14 @@
+server:
+    port: 8081
+    #address: localhost
+    tomcat:
+        basedir: /newtv/boss/demo/service
+        access-log-enabled: true
+        access-log-pattern: "%h %l %u %t \"%r\" %s %b %D"
+        max-threads: 2000
+        uri-encoding: UTF-8
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://172.25.253.51:9999/eureka/,http://172.25.253.52:9999/eureka/,http://172.25.253.53:9999/eureka/
